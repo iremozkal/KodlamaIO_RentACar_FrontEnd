@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-md-6" style="text-align:left">
+        <ul class="list-group">
+            <li class="list-group-item"><b>{{car.carName}}</b></li>
+            <li class="list-group-item">Marka:  {{car.brandName}}</li>
+            <li class="list-group-item">Renk:   {{car.colorName}}</li>
+            <li class="list-group-item">Model:  {{car.modelYear}}</li>
+            <li class="list-group-item">Fiyat:  {{car.dailyPrice}} TRY</li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <div *ngFor="let image of carImages; index as i; first as firstImage" class="carousel-item align-self-center"
+            [ngClass]="{ active: firstImage }" style="height: 100%; width: 100%">
+            <img src="{{imageBaseUrl}}/{{image.imagePath}}" style="height: 100%; width: 100%; object-fit: contain"/>
+        </div>
+    </div>
+</div>

@@ -3,7 +3,15 @@
         <span class="visually-hidden">Loading...</span>
     </div>
 </div>
+
 <ul *ngIf="dataLoaded == true" class="list-group">
     <li class="list-group-item list-group-item-dark" aria-current="true">Renkler</li>
-    <li *ngFor="let color of colors" class="list-group-item">{{color.name}}</li>
+    <li *ngFor="let color of colors" 
+        [class]="getCurrentColorClass(color)"
+        routerLink = "/cars/color/{{color.id}}"
+        (click)="setCurrentColor(color)">
+        {{color.name}}
+    </li>
 </ul>
+
+<!-- <p *ngIf="currentColor">{{currentColor.name}} has been chosen.</p> -->

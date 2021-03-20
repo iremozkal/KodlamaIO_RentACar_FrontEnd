@@ -6,12 +6,13 @@
     style="margin-left: auto; margin-right: auto;">
     <thead class="table-dark">
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Car Name</th>
-        <th scope="col">Brand Name</th>
-        <th scope="col">Color Name</th>
+        <th scope="col">Car</th>
+        <th scope="col">Name</th>
+        <th scope="col">Brand</th>
+        <th scope="col">Color</th>
         <th scope="col">Model Year</th>
         <th scope="col">Daily Price</th>
+        <th scope="col"></th>
       </tr>
     </thead>
     <tbody>
@@ -22,6 +23,9 @@
         <td>{{ car.colorName }}</td>
         <td>{{ car.modelYear }}</td>
         <td>{{ car.dailyPrice }}</td>
+        <td>
+          <button routerLink="/car/details/{{car.carId}}" type="button" class="btn btn-primary">Detaylar</button>
+        </td>
       </tr>
     </tbody>
   </table>  
