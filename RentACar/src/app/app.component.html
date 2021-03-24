@@ -1,18 +1,12 @@
 <div class="container">
   <app-navi></app-navi>
-  <div class="row" style="margin-top:20px;">
-    <div class="col-md-3">
-      <div class="row">
-        <app-brand></app-brand>
-      </div>
-      <br>
-      <div class="row">
-        <app-color></app-color>
-      </div>
+  <div class="row">
+    <div class="col-md-3"> 
+      <app-color></app-color>
     </div>
     <div class="col-md-9 text-center">
-      <router-outlet></router-outlet>
+      <app-car></app-car>
     </div>
   </div>
-
+  <router-outlet></router-outlet>
 </div>

@@ -1,31 +1,27 @@
 <div *ngIf="dataLoaded == false" class="spinner-border text-info" role="status">
-    <span class="visually-hidden">Loading...</span>
-  </div> 
-  
-  <table *ngIf="dataLoaded == true" class="text-center table table-borderless col-md-6"
-    style="margin-left: auto; margin-right: auto;">
-    <thead class="table-dark">
-      <tr>
-        <th scope="col">Car</th>
-        <th scope="col">Name</th>
-        <th scope="col">Brand</th>
-        <th scope="col">Color</th>
-        <th scope="col">Model Year</th>
-        <th scope="col">Daily Price</th>
-        <th scope="col"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let car of cars">
-        <th scope="row">{{ car.carId }}</th>
-        <td>{{ car.carName }}</td>
-        <td>{{ car.brandName }}</td>
-        <td>{{ car.colorName }}</td>
-        <td>{{ car.modelYear }}</td>
-        <td>{{ car.dailyPrice }}</td>
-        <td>
-          <button routerLink="/car/details/{{car.carId}}" type="button" class="btn btn-primary">Detaylar</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>  
+  <span class="visually-hidden">Loading...</span>
+</div> 
+
+<table *ngIf="dataLoaded == false" class="text-center table table-borderless table-sm col-md-6"
+  style="margin-left: auto; margin-right: auto">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Description</th>
+      <th scope="col">Brand ID</th>
+      <th scope="col">Color ID</th>
+      <th scope="col">Model Year</th>
+      <th scope="col">Daily Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let car of cars">
+      <th scope="row">{{ car.id }}</th>
+      <td>{{ car.description }}</td>
+      <td>{{ car.brandId }}</td>
+      <td>{{ car.colorId }}</td>
+      <td>{{ car.modelYear }}</td>
+      <td>{{ car.dailyPrice }}</td>
+    </tr>
+  </tbody>
+</table>
